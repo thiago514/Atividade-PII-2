@@ -1,0 +1,50 @@
+
+
+<form action="/despesas/cadastro" method="POST">
+  <div class="mb-3">
+    <label for="titulo" class="form-label">Titulo</label>
+    <input type="text" class="form-control" name="titulo" id="titulo" required/>
+  </div>
+  <div class="mb-3">
+    <label for="descricao" class="form-label">Descrição</label>
+    <textarea class="form-control" id="descricao" name="descricao"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="valor" class="form-label">Valor Parcela</label>
+    <input type="number" class="form-control" name="valorParcela" id="valorParcela" />
+  </div>
+  <div class="mb-3">
+    <label for="quantidadeParcelas" class="form-label">Quantidade de Parcelas</label>
+    <input type="number" class="form-control" name="quantidadeParcelas" id="quantidadeParcelas" />
+  </div>
+  <div class="md-3">
+    <label for="valorTotal" class="form-label">Valor Total</label>
+    <input type="number" class="form-control" name="valorTotal" id="valorTotal" disabled/>
+  </div>
+  <div class="mb-3 mt-3">
+    <label for="categoria"> Selecione a Categoria</label>
+    <select class="form-select" name="categoria" id="categoria">
+      <option selected>Selecione a categoria</option>
+      <option value="alimentacao">alimentação</option>
+      <option value="transporte">transporte</option>
+      <option value="lazer">lazer</option>
+      <option value="outros">outros</option>
+    </select>
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Criar">
+
+</form>
+
+{{!-- <h1>Criando uma task</h1>
+<form action="/despesas/cadastro" method="POST">
+  <div class="form-control">
+    <label for="title">Título:</label>
+    <input type="text" name="titulo" placeholder="O que você vai fazer?">
+  </div>
+  <div class="form-control">
+    <label for="description">Descrição:</label>
+    <textarea type="text" name="descricao" placeholder="O que você vai fazer?"></textarea>
+  </div>
+  <input type="submit" value="Criar">
+</form> --}}

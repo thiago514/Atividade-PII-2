@@ -1,0 +1,27 @@
+<main>
+<h1>Dividas</h1>
+
+{{#each despesas}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{this.titulo}}</h5>
+    <p class="card-text">Descrição: {{this.descricao}}</p>
+    <p class="card-text">Valor da Parcela: {{this.valor_parcela}}</p>
+    <p class="card-text">Quantidade de parcelas: {{this.qtn_parcelas}}</p>
+    <p class="card-text">Valor Total: {{this.valor_total}}</p>
+    <p class="card-text">Categoria: {{this.categoria}}</p>
+    {{!-- HTML formalmente não aceita enviar requisição delete nativamente --}}
+    <div class="d-flex justify-content-around">
+      <form action="/despesas/deletar/{{this.id}}" method="POST">
+      <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+    <div>
+      <a href="/despesas/editar/{{this.id}}" class="btn btn-primary">Editar</a>
+    </div>
+    
+    </div>
+    
+  </div>
+</div>
+{{/each}}
+</main>
